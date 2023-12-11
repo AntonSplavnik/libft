@@ -6,13 +6,15 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:55:15 by asplavni          #+#    #+#             */
-/*   Updated: 2023/11/17 16:11:45 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/10 17:30:50 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

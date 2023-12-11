@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 17:34:10 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/09 19:44:12 by asplavni         ###   ########.fr       */
+/*   Created: 2023/12/10 16:56:09 by asplavni          #+#    #+#             */
+/*   Updated: 2023/12/10 17:29:59 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The  bzero()  function erases the data in the n bytes of the memory
-// starting at the location pointed to by s, by writing
-// zeros (bytes containing '\0') to that area.
+#include "libft.h"
 
-void	bzero(void *s, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	size_t	i;
+	size_t	j;
+	char	*src1;
 
+	src1 = (char *)src;
+	i = 0;
+	while (i < size && *dst)
+	{
+		dst++;
+		i++;
+	}
+	if (i == size)
+		return (i + ft_strlen((char *)src));
+	j = 0;
+	while (src1[j])
+	{
+		if (j < size - i - 1)
+			*dst++ = src1[j];
+		j++;
+	}
+	*dst = 0;
+	return (j + i);
 }

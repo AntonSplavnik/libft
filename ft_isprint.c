@@ -6,9 +6,11 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:10:07 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/09 17:26:52 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/10 15:57:40 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int a)
 {

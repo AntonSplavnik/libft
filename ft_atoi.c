@@ -6,9 +6,11 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:18:17 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/09 17:24:58 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/10 15:57:17 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

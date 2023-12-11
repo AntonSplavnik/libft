@@ -6,7 +6,7 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 16:15:44 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/08 17:59:57 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/10 16:24:09 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	int				i;
 	unsigned char	*new;
 
-	new = (unsigned char *)s;
 	i = 0;
+	new = (unsigned char *)s;
 	while (i < (int)n)
 	{
 		new[i] = (unsigned char)c;

@@ -6,9 +6,11 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 19:48:41 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/09 20:18:59 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/10 15:57:53 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
