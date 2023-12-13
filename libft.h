@@ -6,7 +6,7 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 17:11:48 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/11 20:20:06 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/13 19:42:08 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ int		ft_tolower(int c);
 
 //Functions to manipulate strings:
 size_t	ft_strlen(const char *str);
-// ft_strlcpy
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
-char	*ft_strchr(const char *s, int c);
-// ft_strrchr
-// ft_strncmp
+char	*ft_strchr(const char *s, int c); //Francinette test 6 faild.
+char	*ft_strrchr(const char *s, int c);
+size_t	ft_strncmp(const char *s1, const char *s2, size_t n);
 // ft_strnstr
 // ft_substr
 // ft_strjoin

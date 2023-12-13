@@ -1,43 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/10 18:43:27 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/13 18:44:07 by asplavni         ###   ########.fr       */
+/*   Created: 2023/12/13 13:11:19 by asplavni          #+#    #+#             */
+/*   Updated: 2023/12/13 18:38:04 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	while (*s)
-	{
-		if (*s == (unsigned char)c)
-			return ((char *)s);
-		s++;
-	}
-	if (c == 0)
-		return ((char *)s);
-	return (NULL);
-}
+	size_t		i;
+	size_t		src_len;
+	const char	*ptr;
 
-/*
-int	main(void)
-{
-	//char	first[50] = "teste";
-	char	*result = ft_strchr("teste", '\0');
-
-	if (result != NULL)
+	i = 0;
+	ptr = src;
+	src_len = 0;
+	while (*src)
 	{
-		printf("%s\n", result);
+		src_len++;
+		src++;
 	}
-	else
-		printf("Character 'c' not found in the string.\n");
-	return (0);
+	if (size == 0)
+		return (src_len);
+	src = ptr;
+	while (i < size - 1 && i < src_len)
+	{
+		*dst = *src;
+		i++;
+		src++;
+		dst++;
+	}
+	*dst = '\0';
+	return (src_len);
 }
- */

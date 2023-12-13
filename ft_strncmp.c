@@ -1,43 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/10 18:43:27 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/13 18:44:07 by asplavni         ###   ########.fr       */
+/*   Created: 2023/12/13 19:29:18 by asplavni          #+#    #+#             */
+/*   Updated: 2023/12/13 20:15:51 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s)
-	{
-		if (*s == (unsigned char)c)
-			return ((char *)s);
-		s++;
-	}
-	if (c == 0)
-		return ((char *)s);
-	return (NULL);
-}
+	size_t	i;
 
-/*
-int	main(void)
-{
-	//char	first[50] = "teste";
-	char	*result = ft_strchr("teste", '\0');
-
-	if (result != NULL)
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (i < n - 1 && *s1 && *s1 == *s2)
 	{
-		printf("%s\n", result);
+		i++;
+		s1++;
+		s2++;
 	}
-	else
-		printf("Character 'c' not found in the string.\n");
-	return (0);
+	if (i == n - 1 || (!*s1 && !*s2))
+		return (0);
+	return ((unsigned char)(*s1) - (unsigned char)(*s2));
 }
- */
