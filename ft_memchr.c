@@ -1,47 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/10 18:43:27 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/15 17:12:23 by asplavni         ###   ########.fr       */
+/*   Created: 2023/12/15 16:57:33 by asplavni          #+#    #+#             */
+/*   Updated: 2023/12/15 20:21:10 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-
-char	*ft_strchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
+	unsigned char	*str;
+	unsigned char	looking_for;
+	size_t			i;
 
-	while (*s)
+	str = (unsigned char *)s;
+	looking_for = (unsigned char )c;
+	i = 0;
+	while (i < n)
 	{
-		if (*s == (unsigned char)c)
-			return ((char *)s);
-		s++;
+		if (*str == looking_for)
+			return ((void *)str);
+		str++;
+		i++;
 	}
-	if (c == 0)
-		return ((char *)s);
 	return (NULL);
 }
-
 /*
+#include <string.h>
 #include <stdio.h>
 
 int	main(void)
 {
-	//char	first[50] = "teste";
-	char	*result = ft_strchr("teste", '\0');
+	const char	str[] = "https://www.42.com";
+	const char	ch = '.';
+	char		*ret;
 
-	if (result != NULL)
-	{
-		printf("%s\n", result);
-	}
-	else
-		printf("Character 'c' not found in the string.\n");
+	ret = ft_memchr(str, ch, strlen(str));
+
+	printf("String after |%c| is - |%s|\n", ch, ret);
+
 	return (0);
-}
- */
+} */

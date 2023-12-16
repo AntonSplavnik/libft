@@ -1,47 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/10 18:43:27 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/15 17:12:23 by asplavni         ###   ########.fr       */
+/*   Created: 2023/12/15 18:55:39 by asplavni          #+#    #+#             */
+/*   Updated: 2023/12/15 20:15:21 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-
-char	*ft_strchr(const char *s, int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	unsigned char	*bit_dest;
+	unsigned char	*bit_src;
+	char			temp [100];
+	size_t			i;
 
-	while (*s)
+	bit_dest = (unsigned char *) dest;
+	bit_src = (unsigned char *) src;
+	i = 0;
+	while (i <= n)
 	{
-		if (*s == (unsigned char)c)
-			return ((char *)s);
-		s++;
+		temp[i] = *bit_src;
+		bit_src++;
+		i++;
 	}
-	if (c == 0)
-		return ((char *)s);
-	return (NULL);
+	i = 0;
+	while (i <= n)
+	{
+		*bit_dest = temp[i];
+		bit_dest++;
+		i++;
+	}
+	return ((void *) bit_dest);
 }
-
-/*
-#include <stdio.h>
 
 int	main(void)
 {
-	//char	first[50] = "teste";
-	char	*result = ft_strchr("teste", '\0');
-
-	if (result != NULL)
-	{
-		printf("%s\n", result);
-	}
-	else
-		printf("Character 'c' not found in the string.\n");
 	return (0);
 }
- */
