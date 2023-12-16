@@ -1,49 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 16:57:33 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/16 19:21:58 by asplavni         ###   ########.fr       */
+/*   Created: 2023/12/16 18:04:10 by asplavni          #+#    #+#             */
+/*   Updated: 2023/12/16 19:24:19 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*str;
-	unsigned char	looking_for;
+	unsigned char	*str1;
+	unsigned char	*str2;
 	size_t			i;
 
-	str = (unsigned char *)s;
-	looking_for = (unsigned char )c;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
 	while (i < n)
 	{
-		if (*str == looking_for)
-			return ((void *)str);
-		str++;
+		if (*str1 != *str2)
+			return ((int *)str1 - (int *)str2);
 		i++;
+		str1++;
+		str2++;
 	}
-	return (NULL);
+	return (0);
 }
 
-/*
-#include <string.h>
-#include <stdio.h>
-
-int	main(void)
+/* int	main(void)
 {
-	const char	str[] = "https://www.42.com";
-	const char	ch = '.';
-	char		*ret;
+	char str1[] = "Hello World";
+	char str2[] = "Hello World";
 
-	ret = ft_memchr(str, ch, strlen(str));
-
-	printf("String after |%c| is - |%s|\n", ch, ret);
-
-	return (0);
+	int resault = ft_memcmp(str1, str2, 3);
+	printf("Resault %d", resault);
 } */

@@ -6,7 +6,7 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 17:11:48 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/15 18:54:31 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/16 19:25:08 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 //void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 //Functions to manipulate memory:
-void	*ft_calloc(size_t nmemb, size_t size);
+// void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
-//int	ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 //char	*ft_strdup(const char *s);
 
 //Functions for numbers:

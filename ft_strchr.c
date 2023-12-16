@@ -6,7 +6,7 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 18:43:27 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/15 17:12:23 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/16 17:59:39 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == 0)
+	if (*s == (unsigned char)c)
 		return ((char *)s);
 	return (NULL);
 }
@@ -38,7 +38,8 @@ int	main(void)
 
 	if (result != NULL)
 	{
-		printf("%s\n", result);
+		printf("Resault: %s\n", result);
+		printf("Memmory adress: %p", result);
 	}
 	else
 		printf("Character 'c' not found in the string.\n");

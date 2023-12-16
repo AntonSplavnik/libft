@@ -6,7 +6,7 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:55:39 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/15 20:15:21 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/16 17:49:05 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,23 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*bit_dest;
 	unsigned char	*bit_src;
-	char			temp [100];
-	size_t			i;
+	unsigned char	*bit_dest;
 
-	bit_dest = (unsigned char *) dest;
-	bit_src = (unsigned char *) src;
-	i = 0;
-	while (i <= n)
-	{
-		temp[i] = *bit_src;
-		bit_src++;
-		i++;
-	}
-	i = 0;
-	while (i <= n)
-	{
-		*bit_dest = temp[i];
-		bit_dest++;
-		i++;
-	}
-	return ((void *) bit_dest);
+	bit_src = (unsigned char *)src;
+	bit_dest = (unsigned char *)dest;
+	if (dest == src)
+		return (dest);
+	if (dest < src)
+		return (ft_memcpy(dest, src, n));
+	while (n--)
+		bit_dest[n] = bit_src[n];
+	return (dest);
 }
 
+/*
 int	main(void)
 {
 	return (0);
 }
+ */
