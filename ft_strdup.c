@@ -1,42 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 18:04:10 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/17 21:45:48 by asplavni         ###   ########.fr       */
+/*   Created: 2023/12/17 19:43:06 by asplavni          #+#    #+#             */
+/*   Updated: 2023/12/17 21:31:10 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strdup(const char *s)
 {
-	unsigned char	*str1;
-	unsigned char	*str2;
-	size_t			i;
+	char	*new;
+	int		i;
+	int		len;
 
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
+
+	len = ft_strlen((char *)s);
+	new = (char *)malloc(sizeof(char) * (len +1));
+	if (new == NULL)
+		return (NULL);
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
-		if (*str1 != *str2)
-			return (*str1 - *str2);
+		new[i] = s[i];
 		i++;
-		str1++;
-		str2++;
 	}
-	return (0);
+	new[i] = '\0';
+	return (new);
 }
 
-/* int	main(void)
+/*
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
 {
-	char str1[] = "Hello World";
-	char str2[] = "Hello World";
-
-	int resault = ft_memcmp(str1, str2, 3);
-	printf("Resault %d", resault);
-} */
+    printf("%s\n", ft_strdup("hello"));
+    printf("%s\n", strdup("hello"));
+}*/
