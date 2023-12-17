@@ -6,7 +6,7 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 19:43:06 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/17 21:31:10 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/17 22:01:20 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strdup(const char *s)
 	char	*new;
 	int		i;
 	int		len;
-
 
 	len = ft_strlen((char *)s);
 	new = (char *)malloc(sizeof(char) * (len +1));

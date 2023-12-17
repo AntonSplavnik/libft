@@ -9,14 +9,15 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupp
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
+
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+		ar rc $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJS) $(BONUS_OBJS)
+		rm -rf $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	rm -Rf $(NAME)
+		rm -Rf $(NAME)
 
 re: fclean all
 

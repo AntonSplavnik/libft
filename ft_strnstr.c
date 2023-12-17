@@ -6,7 +6,7 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 14:05:18 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/17 19:38:24 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/17 22:02:33 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
 	/* size_t	little_len;
 	size_t	i;
 
