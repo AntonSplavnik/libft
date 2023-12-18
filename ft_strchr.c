@@ -6,17 +6,15 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 18:43:27 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/16 17:59:39 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/18 19:55:00 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-
 char	*ft_strchr(const char *s, int c)
 {
-
 	while (*s)
 	{
 		if (*s == (unsigned char)c)
@@ -28,8 +26,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-/*
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
@@ -44,5 +41,4 @@ int	main(void)
 	else
 		printf("Character 'c' not found in the string.\n");
 	return (0);
-}
- */
+} */

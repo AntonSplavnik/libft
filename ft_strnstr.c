@@ -6,7 +6,7 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 14:05:18 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/17 22:02:33 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/18 18:03:02 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,26 +33,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-	/* size_t	little_len;
-	size_t	i;
-
-	i = 0;
-	little_len = ft_strlen(little);
-	if (little_len <= 0)
-		return ((char *) big);
-	if (len < little_len)
-		return (NULL);
-	while (*big && i <= len - little_len)
-	{
-		if (*big == *little && ft_strncmp(big, little, little_len) == 0)
-			return ((char *) big);
-		big++;
-		i++;
-	}
-	return (NULL); */
-
-/*
-int	main(void)
+/*int	main(void)
 {
 	const char	*largestring = "Foo Bar Baz";
 	const char	*smallstring = "Bar";
@@ -61,5 +42,4 @@ int	main(void)
 	ptr = ft_strnstr(largestring, smallstring, 3);
 	printf("Resault: %s", ptr);
 	return (0);
-}
- */
+}*/
