@@ -6,7 +6,7 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:55:39 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/16 17:49:05 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/19 20:51:15 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,4 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int	main(void)
 {
 	return (0);
-}
- */
+}*/

@@ -6,13 +6,13 @@
 /*   By: asplavni <asplavni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 19:47:30 by asplavni          #+#    #+#             */
-/*   Updated: 2023/12/19 18:04:32 by asplavni         ###   ########.fr       */
+/*   Updated: 2023/12/19 21:13:12 by asplavni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_word_count(const char *s, char c)
+static int	ft_word_count(const char *s, char c)
 {
 	int	word_count;
 	int	i;
@@ -33,7 +33,7 @@ int	ft_word_count(const char *s, char c)
 	return (word_count);
 }
 
-void	ft_fill_space(char **to_fill, char const *original, char separator)
+static void	ft_fill_space(char **to_fill, char const *original, char separator)
 {
 	char		**tab1;
 	char const	*temp;
